@@ -157,6 +157,15 @@ python scripts/generate_pandas_indicator_notebook.py
 jupyter lab notebooks/pandas_indicator_tester.ipynb
 ```
 
+### SMC indicators (Smart Money Concepts)
+
+Open [`notebooks/smc_indicator_tester.ipynb`](notebooks/smc_indicator_tester.ipynb) — **17 SMC tools** (swing points, BOS, CHoCH, FVG, order blocks, liquidity sweeps, premium/discount), one runnable cell each.
+
+```powershell
+python scripts/generate_smc_indicator_notebook.py
+jupyter lab notebooks/smc_indicator_tester.ipynb
+```
+
 ```powershell
 pip install -e ".[notebook]"
 jupyter lab notebooks/indicator_tester.ipynb
