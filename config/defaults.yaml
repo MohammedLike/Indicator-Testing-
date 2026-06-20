@@ -1,0 +1,22 @@
+# Optional parameter overrides per indicator.
+# Keys are TA-Lib function names; values are parameter dicts.
+# Unlisted indicators use TA-Lib built-in defaults.
+
+RSI:
+  timeperiod: 14
+
+MACD:
+  fastperiod: 12
+  slowperiod: 26
+  signalperiod: 9
+
+BBANDS:
+  timeperiod: 20
+  nbdevup: 2.0
+  nbdevdn: 2.0
+
+SMA:
+  timeperiod: 20
+
+EMA:
+  timeperiod: 20

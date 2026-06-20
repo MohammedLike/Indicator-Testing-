@@ -1,0 +1,43 @@
+{
+  "indicator": "CDLDOJI",
+  "group": "Pattern Recognition",
+  "params": {},
+  "warmup_bars": 0,
+  "checkpoints": [
+    {
+      "index": 50,
+      "date": "2019-03-31",
+      "integer": 100.0
+    },
+    {
+      "index": 60,
+      "date": "2020-01-31",
+      "integer": 100.0
+    },
+    {
+      "index": 70,
+      "date": "2020-11-30",
+      "integer": 0.0
+    },
+    {
+      "index": 80,
+      "date": "2021-09-30",
+      "integer": 100.0
+    },
+    {
+      "index": 90,
+      "date": "2022-07-31",
+      "integer": 100.0
+    },
+    {
+      "index": 100,
+      "date": "2023-05-31",
+      "integer": 0.0
+    },
+    {
+      "index": 110,
+      "date": "2024-03-31",
+      "integer": 100.0
+    }
+  ]
+}

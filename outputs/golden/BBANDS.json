@@ -1,0 +1,62 @@
+{
+  "indicator": "BBANDS",
+  "group": "Overlap Studies",
+  "params": {
+    "timeperiod": 20,
+    "nbdevup": 2.0,
+    "nbdevdn": 2.0,
+    "matype": 0
+  },
+  "warmup_bars": 19,
+  "checkpoints": [
+    {
+      "index": 50,
+      "date": "2019-03-31",
+      "upperband": 139.28783014254054,
+      "middleband": 126.72105070803727,
+      "lowerband": 114.154271273534
+    },
+    {
+      "index": 60,
+      "date": "2020-01-31",
+      "upperband": 152.21470637790938,
+      "middleband": 137.28965937564755,
+      "lowerband": 122.36461237338571
+    },
+    {
+      "index": 70,
+      "date": "2020-11-30",
+      "upperband": 162.18388143348653,
+      "middleband": 147.8896484702587,
+      "lowerband": 133.59541550703085
+    },
+    {
+      "index": 80,
+      "date": "2021-09-30",
+      "upperband": 164.90447203694555,
+      "middleband": 153.8367704204028,
+      "lowerband": 142.76906880386002
+    },
+    {
+      "index": 90,
+      "date": "2022-07-31",
+      "upperband": 162.04961112094378,
+      "middleband": 155.30476475811585,
+      "lowerband": 148.55991839528792
+    },
+    {
+      "index": 100,
+      "date": "2023-05-31",
+      "upperband": 169.14390919783548,
+      "middleband": 151.50358593486303,
+      "lowerband": 133.86326267189057
+    },
+    {
+      "index": 110,
+      "date": "2024-03-31",
+      "upperband": 160.99427531700502,
+      "middleband": 141.91617702227103,
+      "lowerband": 122.83807872753702
+    }
+  ]
+}
