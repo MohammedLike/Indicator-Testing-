@@ -148,6 +148,15 @@ Regenerate after TA-Lib updates:
 python scripts/generate_indicator_notebook.py
 ```
 
+### Pandas indicators (no TA-Lib)
+
+Open [`notebooks/pandas_indicator_tester.ipynb`](notebooks/pandas_indicator_tester.ipynb) — **37 indicators** built with pure pandas/numpy (SMA, EMA, RSI, MACD, BBANDS, OBV, VWAP, etc.), one runnable cell each.
+
+```powershell
+python scripts/generate_pandas_indicator_notebook.py
+jupyter lab notebooks/pandas_indicator_tester.ipynb
+```
+
 ```powershell
 pip install -e ".[notebook]"
 jupyter lab notebooks/indicator_tester.ipynb
