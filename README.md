@@ -140,7 +140,13 @@ pytest -v
 
 ## Jupyter notebook (interactive one-by-one testing)
 
-Open [`notebooks/indicator_tester.ipynb`](notebooks/indicator_tester.ipynb) for a step-through UI with dropdown, prev/next buttons, validation, and charts.
+Open [`notebooks/indicator_tester.ipynb`](notebooks/indicator_tester.ipynb) for **one runnable cell per indicator** (158 blocks, no dropdown).
+
+Regenerate after TA-Lib updates:
+
+```powershell
+python scripts/generate_indicator_notebook.py
+```
 
 ```powershell
 pip install -e ".[notebook]"
