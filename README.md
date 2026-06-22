@@ -166,6 +166,17 @@ python scripts/generate_smc_indicator_notebook.py
 jupyter lab notebooks/smc_indicator_tester.ipynb
 ```
 
+## Streamlit app
+
+Interactive web UI for all three libraries (single indicator + batch run + charts).
+
+```powershell
+pip install -e ".[app]"
+streamlit run app.py
+```
+
+Open http://localhost:8501 — load your CSV, pick TA-Lib / Pandas / SMC, run one indicator or the full batch.
+
 ```powershell
 pip install -e ".[notebook]"
 jupyter lab notebooks/indicator_tester.ipynb

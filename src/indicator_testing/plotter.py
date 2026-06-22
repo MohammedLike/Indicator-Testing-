@@ -35,13 +35,11 @@ def _format_params(params: dict) -> str:
     return ", ".join(parts)
 
 
-def plot_indicator(
+def make_indicator_figure(
     df: pd.DataFrame,
     result: IndicatorResult,
-    output_path: Path | None = None,
-    *,
-    show: bool = False,
-) -> Path:
+) -> plt.Figure:
+    """Build matplotlib figure for an indicator result (caller closes figure)."""
     if result.status != "success" or not result.outputs:
         raise ValueError(f"Cannot plot indicator with status={result.status}: {result.message}")
 
@@ -93,6 +91,8 @@ def plot_indicator(
         ax_price.plot(dates, close, color="black", linewidth=1)
         ax_price.set_ylabel("Close")
         for key, arr in result.outputs.items():
+            if arr.dtype == object:
+                continue
             ax_ind.plot(dates, arr, label=key, linewidth=1)
         ax_ind.set_ylabel(result.name)
         ax_ind.legend(loc="upper left")
@@ -103,6 +103,20 @@ def plot_indicator(
 
     fig.suptitle(f"{title}\n{subtitle}", fontsize=11)
     fig.tight_layout()
+    return fig
+
+
+def plot_indicator(
+    df: pd.DataFrame,
+    result: IndicatorResult,
+    output_path: Path | None = None,
+    *,
+    show: bool = False,
+) -> Path:
+    if result.status != "success" or not result.outputs:
+        raise ValueError(f"Cannot plot indicator with status={result.status}: {result.message}")
+
+    fig = make_indicator_figure(df, result)
 
     if output_path is None:
         charts_dir = default_charts_dir() / _safe_filename(group)
